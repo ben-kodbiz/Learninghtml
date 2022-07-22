@@ -1,0 +1,94 @@
+<!-- INSTRUCTIONS
+Using the document below as a guide, apply tags to structure your 
+index.html and about.html pages as created in previous lessons.
+
+
+CRITERIA: 
+1. Must define an area as your <header> (the top, usually logo/business name)
+2. Must define an area as a <footer> (the bottom, usually has copyright info)
+3. Must define a <section> (usually contains paragraphs or specific content)
+4. Define a navigation area (where links will go)
+5. Define links for at least "Home" "About" and "Contact", using # as the url.
+6. Set an ID to any element and create a link to it in the NAV area
+7. Pick a font you love and assign it as a font-family to at least your header
+-->
+
+
+
+<!doctype html> 
+<html> 
+	<head>    
+		<meta charset="utf-8" />    
+		<title>My Page</title> 	
+<!-- This is a new tag! STYLE allows you to quickly format your document with colors, fonts, sizes, 
+and so much more.  STYLE tags are always nested within the HEAD.  The language used between STYLE tags is
+called CSS, or Cascading Style Sheets. -->		
+	<style>
+		/* This is another COMMENT type you can use with CSS and JS
+		h1 is a selector in CSS markup.  Think about when you are formatting a Word document -
+		you must always SELECT text before you can change how it looks.  This works the same way,
+		but instead of selecting with our mouse, we command the browser to do it using CSS.
+		
+		Between the { } are the properties and attributes.
+		Font-family is a PROPERTY, sans-serif is the ATTRIBUTE.
+		
+		This style is being assigned to all h1 tags. */
+		h1 {
+			font-family: sans-serif;
+		}
+		
+		/* Any HTML tag can be targeted */
+		section {
+			font-family: Tahoma;
+		}
+		
+		/* CLASS names are targeted using a period (.) before the name */
+		.nathan {
+			font-family: Webdings;
+		}
+		
+		/* div ID names are targeted using a # before the name. */
+		#symphonies {
+			color: red;
+		}
+		
+	</style>
+		
+		<!--Notice we just closed the style tag with a </style>. So now we go back to typing in regular HTML not CSS-->
+		
+		
+	</head> 
+<body> 
+	<header><h1>Selecting a Concert Style</h1></header> 
+
+	<nav>
+<!-- Using the # symbol alone won't allow the links to go anywhere, but they look active and work for styling purposes. -->
+	<a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a> |
+
+<!-- hyperlinks can link to items on the same page by calling the ID -->
+ <a href="#symphonies">Symphonies</a> | <a href="#raves">Raves</a>
+	</nav>
+
+
+
+
+<section>
+<!-- An ID is set on this header. Clicking the symphonies link (#symphonies) will scroll to this point. -->
+	<h1 id="symphonies">Symphonies</h1>   
+	<p>A symphony is a type of musical composition generally performed by a full orchestra.</p>
+<img src="assets/orchestra.jpg">
+</section> 
+
+
+<section>
+<!-- An ID is set on this header. Clicking the raves link (#raves) will scroll to this point. -->
+	<h1 id="raves">Raves</h1>
+	<p>A rave is a gathering of people who listen and dance to  music, especially electronic music, usually performed by a  live band or live DJs.</p>
+<img src="assets/rave.jpg">
+</section> 
+
+
+<footer><p class="nathan">Author: Nathaniel Becker</p></footer>
+
+</body>
+</html>
